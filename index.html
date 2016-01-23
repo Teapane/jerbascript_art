@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Smiley Face</title>
+    <title>COS/SIN</title>
   </head>
   <body>
     <canvas id="a" width="800" height="800">
-    This text is displayed if your browser does not support HTML5 Canvas.
     </canvas>
 
     <script type='text/javascript'>
-      // $ open index.html
     var a_canvas = document.getElementById("a");
     var context = a_canvas.getContext("2d");
     function drawFor(multiplier) {
@@ -29,7 +27,8 @@
       }
       context.stroke();
       context.closePath();
-    }
+    };
+
   var multiplier = 1;
   function draw() {
    if(multiplier > 10) return;
@@ -39,8 +38,8 @@
       drawFor(multiplier);
       draw();
       }, 100);
-  }
-draw();
+  };
+  draw();
   </script>
  </body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Smiley Face</title>
+  </head>
+  <body>
+    <canvas id="a" width="800" height="800">
+    This text is displayed if your browser does not support HTML5 Canvas.
+    </canvas>
+
+    <script type='text/javascript'>
+      // $ open index.html
+    var a_canvas = document.getElementById("a");
+    var context = a_canvas.getContext("2d");
+    function drawFor(multiplier) {
+      var radius  = 350;
+      var xOffset = 400;
+      var yOffset = 400;
+      context.beginPath();
+      for(var i=0; i<300; i++) {
+        context.moveTo(
+            xOffset + radius*Math.cos(i/300 * 2*Math.PI),
+            yOffset + radius*Math.sin(i/300 * 2*Math.PI)
+            );
+        context.lineTo(
+            xOffset + radius*Math.cos((i*multiplier)/300 * 2*Math.PI),
+            yOffset + radius*Math.sin((i*multiplier)/300 * 2*Math.PI)
+            );
+      }
+      context.stroke();
+      context.closePath();
+    }
+  var multiplier = 1;
+  function draw() {
+   if(multiplier > 10) return;
+     setTimeout(function() {
+      multiplier += 0.01;
+      context.clearRect(0, 0, 800, 800);
+      drawFor(multiplier);
+      draw();
+      }, 100);
+  }
+draw();
+  </script>
+ </body>
+</html>

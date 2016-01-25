@@ -8,6 +8,7 @@
     </canvas>
 
     <script type='text/javascript'>
+
     var a_canvas = document.getElementById("a");
     var context = a_canvas.getContext("2d");
     function drawFor(multiplier) {
@@ -25,8 +26,10 @@
             yOffset + radius*Math.sin((i*multiplier)/300 * 2*Math.PI)
             );
       }
+
       context.stroke();
       context.closePath();
+
     };
 
   var multiplier = 1;
@@ -43,3 +46,4 @@
   </script>
  </body>
 </html>
+

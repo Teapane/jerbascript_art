@@ -1,6 +1,9 @@
 # jerbascript_art
 
 **Playing around with Jerbascript**
-
-# To open in Browser
+ and some elixir too. 
+ 
+# To open JS in Browser
   ` open index.html`
+  
+  
